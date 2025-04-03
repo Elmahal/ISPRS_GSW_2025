@@ -1525,11 +1525,8 @@ var classifier = ee.Classifier.smileCart(10).train({
 
 // Apply the classifier
 var classifiedImage = dataset.select(bands).classify(classifier);
-var clippedClassifiedImage = classifiedImage.clip(dubai);
-
 // Clip the classified image to the ROI
-// var clippedClassifiedImage = classifiedImage.clip(dubai);
-
+var clippedClassifiedImage = classifiedImage.clip(dubai);
 
 // Visualization
 var visParams = {min: 0, max: 3, palette: ['#3182bd', '#e6ab02', '#fff7bc', '#09981F']};
